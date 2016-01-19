@@ -3,3 +3,10 @@
 BETA VERSION
 
 https://wayfix-beta.herokuapp.com
+
+1) Dashboard controller
+2) Patients controller
+3) Doctors controller
+
+
+
