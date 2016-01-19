@@ -1,1 +1,5 @@
 ***WAYFIX CLINICS MANAGEMENT***
+
+BETA VERSION
+
+https://wayfix-beta.herokuapp.com
