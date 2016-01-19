@@ -11,9 +11,9 @@
 		<%= f.text_field :name, class:"form-control" %>
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<div class="col-sm-2 control-label">
-		<%= f.label :Appellidos %>
+		<%= f.label :Apellidos %>
 		</div>
 		<div class="col-sm-2">
 		<%= f.text_field :surname_1, class:"form-control", placeholder:"Primer apellido" %>
@@ -22,7 +22,7 @@
 		<%= f.text_field :surname_2, class:"form-control", placeholder:"Segundo apellido" %>
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<div class="col-sm-2 control-label">
 		<%= f.label :Fecha_de_nacimiento %>
 		</div>
@@ -30,20 +30,44 @@
 		<%= f.text_field :birthday, class:"form-control", 'data-behaviour' => 'datepicker' %>
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<div class="col-sm-2 control-label">
-		<%= f.label :Nombre %>
+		<%= f.label :Sexo %>
 		</div>
-		<div class="col-sm-2">
-		<%= f.text_field :name, class:"form-control" %>
+		<div class="col-sm-1">
+		<%= f.select :genre, ['','Hombre', 'Mujer'], class:"form-control" %>
 		</div>
 	</div>
-		<div class="form-group">
+	<div class="form-group">
 		<div class="col-sm-2 control-label">
-		<%= f.label :Nombre %>
+		<%= f.label :DNI %>
 		</div>
 		<div class="col-sm-2">
-		<%= f.text_field :name, class:"form-control" %>
+		<%= f.text_field :dni, class:"form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :Pasaporte %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :passport, class:"form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :País %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :country, as: :country, class:"form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :DNI %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :dni, class:"form-control" %>
 		</div>
 	</div>
 	<% end %>

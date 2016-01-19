@@ -30,6 +30,9 @@ gem 'bcrypt', '~> 3.1.10'
 # Bootstrap Datepicker
 gem 'bootstrap-datepicker-rails', '>= 0.6.21'
 
+# Select country origin
+gem 'country_select'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
