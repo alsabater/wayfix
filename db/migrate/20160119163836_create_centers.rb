@@ -1,7 +1,7 @@
 class CreateCenters < ActiveRecord::Migration
   def change
     create_table :centers do |t|
-      t.references :client, index: true, foreign_key: true
+      t.integer :client_id
       t.string :center_name
       t.string :address
       t.string :city

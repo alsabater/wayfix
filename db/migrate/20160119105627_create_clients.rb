@@ -1,6 +1,7 @@
 class CreateClients < ActiveRecord::Migration
   def change
     create_table :clients do |t|
+      t.integer :user_id
       t.string :clinic_name
       t.string :nif
       t.string :address
@@ -14,8 +15,6 @@ class CreateClients < ActiveRecord::Migration
       t.string :email
       t.string :language
       t.string :currency
-      t.attachment :clinic_logo
-      t.references :user, index: true, foreign_key: true
       t.timestamps null: false
     end
   end
