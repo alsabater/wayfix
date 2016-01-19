@@ -15,3 +15,10 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){ 
+    $(".glyphicon").click(function() {
+    	$(".glyphicon").css("color","#3087D0");
+        $(this).css("color","#003F95");
+    });
+});
