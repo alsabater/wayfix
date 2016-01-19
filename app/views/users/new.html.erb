@@ -1,0 +1,50 @@
+<div id="signup" class="form-horizontal">
+	<div class="row">
+		<h2> Registro </h2><br/>
+	</div>
+	<%= form_for @user do |f| %>
+	<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :Nombre %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :name, class:"form-control" %>
+		</div>
+	</div>
+		<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :Appellidos %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :surname_1, class:"form-control", placeholder:"Primer apellido" %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :surname_2, class:"form-control", placeholder:"Segundo apellido" %>
+		</div>
+	</div>
+		<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :Fecha_de_nacimiento %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :birthday, class:"form-control", 'data-behaviour' => 'datepicker' %>
+		</div>
+	</div>
+		<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :Nombre %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :name, class:"form-control" %>
+		</div>
+	</div>
+		<div class="form-group">
+		<div class="col-sm-2 control-label">
+		<%= f.label :Nombre %>
+		</div>
+		<div class="col-sm-2">
+		<%= f.text_field :name, class:"form-control" %>
+		</div>
+	</div>
+	<% end %>
+</div>

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require bootstrap-datepicker
 //= require turbolinks
 //= require_tree .
 
@@ -21,4 +22,12 @@ $(document).ready(function(){
     	$(".glyphicon").css("color","#3087D0");
         $(this).css("color","#003F95");
     });
+
+	$('[data-behaviour~=datepicker]').datepicker({
+		format: 'dd/mm/yyyy',
+		startDate: '01/01/1920',
+		language: 'es',
+		startView: 2
+	});
 });
+

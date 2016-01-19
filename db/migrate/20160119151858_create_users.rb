@@ -13,7 +13,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :phone_number_1
       t.string :phone_number_2
       t.string :email
-      t.string :password
+      t.string :password_digest
       t.string :language
       t.string :job_position
       t.boolean	:is_admin?, default: false
