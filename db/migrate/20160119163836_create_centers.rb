@@ -18,3 +18,4 @@ class CreateCenters < ActiveRecord::Migration
     end
   end
 end
+

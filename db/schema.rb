@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160119163836) do
+ActiveRecord::Schema.define(version: 20160119195323) do
+
+  create_table "centerandusers", id: false, force: :cascade do |t|
+    t.integer "center_id"
+    t.integer "user_id"
+  end
+
+  add_index "centerandusers", ["center_id"], name: "index_centerandusers_on_center_id"
+  add_index "centerandusers", ["user_id"], name: "index_centerandusers_on_user_id"
 
   create_table "centers", force: :cascade do |t|
     t.integer  "client_id"
