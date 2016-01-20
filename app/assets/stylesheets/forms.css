@@ -1,5 +1,10 @@
 #signup {
 	text-align: center;
+	background-color: lightgrey;
+	border-radius: 10px;
 	margin: auto;
+	width: 500px;
+	padding: 30px;
 }
+
 
