@@ -17,15 +17,15 @@
  */
 
  #topbar {
- 	position: fixed;
- 	top: 0px;
+ 	position: static;
+ 	height: 90px;
  	width: 100%;
 	background-color: white;
-	height: 90px;
+	margin-bottom: 15px;
 }
 
 #topbar ul {
-	padding: 20px 30px 0px 0px;
+	padding: 40px 30px 0px 0px;
 	float: right;
 }
 
@@ -36,9 +36,8 @@
 }
 
 #navbar {
-	float: left;
 	width: 100px;
-	margin: 0;
+	margin-top: 30px;
 }
 #navbar li {
 	margin-left: 20px;
@@ -62,10 +61,8 @@ span.glyphicon:active {
 
 footer {
 	background-color: white;
-   	position:fixed;
-   	left:0px;
-   	bottom:0px;
-   	padding-top: 40px;
+	position: absolute;
+   	bottom:0;
    	height:70px;
    	width:100%;
 	text-align: center;
@@ -77,4 +74,5 @@ footer {
 	background-color: white;
 	background-position: center;
 	background-attachment: fixed;
+	width: 100%;
 }

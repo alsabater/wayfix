@@ -1,16 +1,27 @@
 #signup {
 	background-color: rgba(255, 255, 255, 0.36);
 	border-radius: 10px;
-	width: 1000px;
 	padding: 30px;
+	width: 1000px;
+	margin: auto;
+}
+
+#login_form {
+	background-color: rgba(255, 255, 255, 0.36);
+	border-radius: 10px;
+	padding: 30px;
+	width: 400px;
+	margin: auto;
 }
 
 .select {
 	width: 130px
 }
 
-#login_form {
-	margin-top: 200px;
+#button-form {
+	margin: auto;
+	text-align: center;
 }
+
 
 
