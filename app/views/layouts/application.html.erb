@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="topbar">
-  	<img src="/public/assets/wayfix-d9c9d19593a722d2d1726e14afadf02582f3da5f5c5575c395e659e2bd20aa61.png">
+  	<img src= <%= asset_path("wayfix.png") %> >
     <ul class="list-inline">
     <% if session[:user_id] == nil %>
       <li><%= link_to "Iniciar sesión", login_path %></li>
