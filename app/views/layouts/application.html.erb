@@ -10,7 +10,7 @@
   <div id="topbar">
   	<img src= <%= asset_path("wayfix.png") %> >
     <ul class="list-inline">
-    <% if session[:user_id] == nil %>
+    <% if !logged_in? %>
       <li><%= link_to "Iniciar sesión", login_path %></li>
       <li><%= link_to "Registrarse", signup_path %></li>
     <% else %>

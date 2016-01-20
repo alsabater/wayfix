@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:session][:password])
 			flash[:success] = "Bienvenido a Wayfix"
 			session[:user_id] = user.id
-			redirect_to root_path
+			redirect_to user_path(user.id)
 		else
 			flash.now[:danger] = "El email o el password no se corresponden con ningún usuario"
 			render 'new'

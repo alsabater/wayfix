@@ -1,0 +1,112 @@
+<%= form_for @user do |f| %>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-horizontal">
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Email %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.email_field :email, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :password %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.password_field :password, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Nombre %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.text_field :name, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Apellidos %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.text_field :surname_1, class:"form-control", placeholder:"Primer apellido" %>
+						<%= f.text_field :surname_2, class:"form-control", placeholder:"Segundo apellido" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Fecha_de_nacimiento %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.text_field :birthday, class:"form-control", 'data-behaviour' => 'datepicker' %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Sexo %>
+					</div>
+					<div class="col-sm-1">
+						<%= f.select(:genre, ['','V/M', 'M/F'], {}, {:class => "select"}) %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-horizontal">
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :DNI %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.text_field :dni, class:"form-control", placeholder: "23185679F" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Pasaporte %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.text_field :passport, class:"form-control", placeholder: "AAE5265451" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :País %>
+					</div>
+					<div class="col-sm-3">
+						<%= f.country_select(:country, ["Spain"], {}, {:class => "select"})%>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Teléfono %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.text_field :phone_number_1, class:"form-control", placeholder:"0034661662050" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Teléfono_alternativo %>
+					</div>
+					<div class="col-sm-6">
+						<%= f.text_field :phone_number_2, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Tipo_de_usuario %>
+					</div>
+					<div class="col-sm-3">
+						<%= f.select(:job_position, ['','Personal de administración y servicios','Personal Médico','Personal sanitario no médico'], {}, {:class => "select"}) %>
+					</div>
+				</div>
+				<div class="text-center">
+					<%= f.submit :Actualizar, class:"btn btn-success" %>
+				</div>
+			</div>
+		</div>	
+	</div>
+<%end%>
