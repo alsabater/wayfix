@@ -1,13 +1,16 @@
 #signup {
-	text-align: center;
-	background-color: lightgrey;
+	background-color: rgba(255, 255, 255, 0.36);
 	border-radius: 10px;
-	margin: auto;
-	width: 500px;
+	width: 1000px;
 	padding: 30px;
 }
 
 .select {
 	width: 130px
 }
+
+#login_form {
+	margin-top: 200px;
+}
+
 
