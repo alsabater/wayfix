@@ -16,7 +16,13 @@
 
  */
 
- #topbar {
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#topbar {
  	position: static;
  	height: 90px;
  	width: 100%;
@@ -60,13 +66,19 @@ span.glyphicon:active {
     color: #003F95;
 }
 
-footer {
-	background-color: white;
-	position: absolute;
-   	bottom:0;
-   	height:70px;
-   	width:100%;
+#content {
+	padding-bottom:70px; /* Height of the footer element */
+}
+
+#footer {
+	background: white;
+	width:100%;
+	height:70px;
+	position:fixed;
+	bottom:0;
+	left:0;
 	text-align: center;
+	padding-top: 30px;
 }
 
 #log_in_background {
