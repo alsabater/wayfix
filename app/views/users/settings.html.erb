@@ -2,4 +2,10 @@
 
 <h3>Ajustes  </h3>
 <br/>
-<%= link_to "Crear Clínica", new_client_path %>
+
+<% if @client != nil %>
+	<h4>Administrador de: </h4>
+	<%= @client.clinic_name %>
+<% else %>
+	<%= link_to "Crear clínica", new_client_path %>
+<% end %>

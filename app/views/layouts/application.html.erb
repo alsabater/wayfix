@@ -19,6 +19,13 @@
     </ul>
   </div>
   <div>
+    <div class="alerts">
+    <% if flash[:danger] %>
+      <div class="alert alert-danger" role="alert">
+        <%= flash[:danger] %>
+      </div>
+    <% end %>
+    </div>
     <%= yield %>
   </div>
   <footer>

@@ -34,7 +34,7 @@ class UsersController < ApplicationController
 	end
 
 	def settings
-
+		@client = current_client
 	end
 
 	private
