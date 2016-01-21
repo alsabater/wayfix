@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+	before_action :session_empty?, only: :new
 	def new
 	end
 
@@ -18,5 +19,15 @@ class SessionsController < ApplicationController
 		session[:user_id] = nil
 		flash[:success] = "Has cerrado la sesión"
 		redirect_to login_path
+	end
+
+	private
+
+	helper_method :session_empty?
+
+	def session_empty?
+		if current_user
+			redirect_to user_path(current_user)
+		end
 	end
 end
