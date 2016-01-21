@@ -1,9 +1,8 @@
 <%= render 'navbar' %>
-
-<div class="col-md-10">
-	<h2>Hola <%= @user.name %></h2><br/>
+<h2>Hola <%= @user.name %></h2><br/>
+<div class="col-md-11">
 		<h4>Datos personales</h4><br/>
-		<div class="col-md-4">
+		<div class="col-md-3">
 		<ul class="list-unstyled">
 			<li><b>Email:</b> <%= @user.email %></li><br/>
 			<li><b>Nombre:</b> <%= @user.name %></li><br/>
@@ -13,7 +12,7 @@
 			<li><b>DNI:</b> <%= @user.dni %></li><br/>
 		</ul>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 		<ul class="list-unstyled">
 			<li><b>Pasaporte:</b> <%= @user.passport %></li><br/>
 			<li><b>País de origen:</b> <%= @user.country %></li><br/>

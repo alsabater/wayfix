@@ -1,0 +1,105 @@
+<h3>Crear Clínica</h3><br/>
+<%= form_for @client do |f| %>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-horizontal">
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Nombre_clínica %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :clinic_name, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :NIF %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :nif, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Dirección_postal %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :address, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Ciudad %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :city, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Provincia %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :province, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Código_postal %>
+					</div>
+					<div class="col-sm-3">
+						<%= f.text_field :zip_code, class:"form-control" %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-horizontal">
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Teléfono %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :phone_number_1, class:"form-control", placeholder:"0034910045543"  %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Teléfono_alternativo %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :phone_number_2, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Fax %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :fax_number, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Email %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.email_field :email, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4 control-label">
+						<%= f.label :Divisa %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :currency, class:"form-control" %>
+					</div>
+				</div>
+				<div class="text-center">
+					<%= f.submit "Crear clínica", class:"btn btn-success" %>
+					<%= link_to 'Cancelar', users_settings_path %>
+				</div>
+			</div>
+		</div>	
+	</div>
+<%end%>
