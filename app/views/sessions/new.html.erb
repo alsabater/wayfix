@@ -19,7 +19,9 @@
       </div>
     </div>
     <div class="text-center">
-        <%= f.submit "Log in", class: 'btn btn-primary' %>
+        <p><%= f.submit "Log in", class: 'btn btn-primary' %></p>
+        ¿Aún no te has registrado?<br/>
+        <%= link_to "Regístrate aquí", signup_path %>
     </div>
     <% end %>
   </div>

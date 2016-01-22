@@ -17,22 +17,22 @@
  */
 
 body {
-	margin:0;
-	padding:0;
+	margin: 0;
 	height:100%;
 }
 
 #topbar {
  	position: static;
- 	height: 90px;
+ 	height: 100px;
  	width: 100%;
-	background-color: white;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 
 #topbar ul {
-	padding: 40px 30px 0px 0px;
+	padding: 20px 30px 0px 0px;
+	margin-bottom: 10px;
 	float: right;
+	font-size: 15px;
 }
 
 #topbar img {
@@ -66,10 +66,6 @@ span.glyphicon:active {
     color: #003F95;
 }
 
-#content {
-	padding-bottom:70px; /* Height of the footer element */
-}
-
 #footer {
 	background: white;
 	width:100%;
@@ -82,12 +78,11 @@ span.glyphicon:active {
 }
 
 #log_in_background {
-	background-image: url('<%= asset_path("log_in_eye.jpg") %> ');
-	background-repeat: no-repeat;
-	background-color: white;
-	background-position: center;
-	background-attachment: fixed;
-	width: 100%;
+  	background: url('<%= asset_path("wayfix_background.jpg") %> ') no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
 }
 
 .alerts {

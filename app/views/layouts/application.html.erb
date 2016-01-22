@@ -7,19 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrapper">
     <div id="topbar">
     	<img src= <%= asset_path("wayfix.png") %> >
       <ul class="list-inline">
-      <% if !logged_in? %>
-        <li><%= link_to "Iniciar sesión", login_path %></li>
-        <li><%= link_to "Registrarse", signup_path %></li>
-      <% else %>
+      <% if logged_in? %>
         <li><%= link_to "Cerrar sesión", signout_path, method: :delete %></li>
       <% end %>
       </ul>
     </div>
-    <div id="content">
       <div class="alerts">
       <% if flash[:danger] %>
         <div class="alert alert-danger" role="alert">
@@ -28,11 +23,6 @@
       <% end %>
       </div>
       <%= yield %>
-    </div>
-    <div id="footer">
-      ©Wayfix 2016
-    </div>
-  </div>
 </body>
 </html>
 

@@ -5,13 +5,19 @@ class ClientsController < ApplicationController
 	end
 
 	def create
-			@client = Client.new(client_params)
-			@client.user_id = current_user.id
-			if @client.save
-				redirect_to users_settings_path
-			else
-				render 'new'
-			end
+		@client = Client.new(client_params)
+		@client.user_id = current_user.id
+		current_user.client_id = @client.id
+		if @client.save
+			current_user.save
+			redirect_to users_settings_path
+		else
+			render 'new'
+		end
+	end
+
+	def destroy
+		@client = Client.find(current_user.client_id)
 	end
 
 	private
