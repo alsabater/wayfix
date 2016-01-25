@@ -1,7 +1,7 @@
 <body class="log_in_background">
 <div id="signup">
 <h4>Información personal</h4><br/>
-<%= form_for @user, url: wizard_path do |f| %>
+<%= render layout: 'form' do |f| %>
 	<div class="row">
 	<div class="form-horizontal">
 	<div class="form-group">
@@ -27,9 +27,6 @@
 			<%= f.select(:genre, ['Género','Masculino', 'Femenino'], {}, {:class => "select"}) %>
 		</div>
 	</div>
-	</div>
-	<div class="text-center">
-		<%= f.submit 'Siguiente', class:"btn btn-primary" %>
 	</div>
 	</div>
 <% end %>

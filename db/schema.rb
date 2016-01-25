@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20160119195323) do
     t.string   "language"
     t.string   "job_position"
     t.string   "is_admin?",            default: "false"
-    t.string   "status",               default: "false"
+    t.string   "active",               default: "false"
     t.boolean  "access_medical_data?", default: true
     t.boolean  "access_agenda?",       default: true
     t.boolean  "access_statistics?",   default: true

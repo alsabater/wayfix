@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 	def update
 		@user = current_user
 		@user.update_attributes(user_params)
-		redirect_to user_path
+		redirect_to user_path(@user)
 	end
 
 	def settings
@@ -35,6 +35,6 @@ class UsersController < ApplicationController
 
 	private
  	def user_params
-    params.require(:user).permit(:status, :name, :surname_1, :surname_2, :dni_passport, :genre, :birthday, :country, :phone_number_1, :phone_number_2, :email, :password, :job_position)
+    params.require(:user).permit(:active, :name, :surname_1, :surname_2, :dni_passport, :genre, :birthday, :country, :phone_number_1, :phone_number_2, :email, :password, :job_position)
   	end
 end
