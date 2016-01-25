@@ -69,8 +69,7 @@ ActiveRecord::Schema.define(version: 20160119195323) do
     t.string   "name"
     t.string   "surname_1"
     t.string   "surname_2"
-    t.string   "dni"
-    t.string   "passport"
+    t.string   "dni_passport"
     t.string   "genre"
     t.date     "birthday"
     t.string   "country"
@@ -80,14 +79,14 @@ ActiveRecord::Schema.define(version: 20160119195323) do
     t.string   "password_digest"
     t.string   "language"
     t.string   "job_position"
-    t.boolean  "is_admin?",            default: false
+    t.string   "is_admin?",            default: "false"
+    t.string   "status",               default: "false"
     t.boolean  "access_medical_data?", default: true
     t.boolean  "access_agenda?",       default: true
     t.boolean  "access_statistics?",   default: true
     t.boolean  "access_accounting?",   default: true
-    t.boolean  "is_active?",           default: true
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
 end

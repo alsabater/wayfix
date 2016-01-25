@@ -33,6 +33,8 @@ gem 'bootstrap-datepicker-rails', '>= 0.6.21'
 # Select country origin
 gem 'country_select'
 
+# Wizard registration user
+gem 'wicked'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

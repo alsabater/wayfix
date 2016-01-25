@@ -10,7 +10,7 @@
     <div id="topbar">
     	<img src= <%= asset_path("wayfix.png") %> >
       <ul class="list-inline">
-      <% if logged_in? %>
+      <% if logged_in? && !@user.new_record? %>
         <li><%= link_to "Cerrar sesión", signout_path, method: :delete %></li>
       <% end %>
       </ul>

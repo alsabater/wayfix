@@ -1,0 +1,46 @@
+<body class="log_in_background">
+<div id="signup">
+<h4>Información personal</h4><br/>
+<%= form_for @user, url: wizard_path do |f| %>
+	<div class="row">
+	<div class="form-horizontal">
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.text_field :name, class:"form-control", placeholder:"Nombre" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-6">
+			<%= f.text_field :surname_1, class:"form-control", placeholder:"Primer apellido" %>
+		</div>
+		<div class="col-sm-6">
+			<%= f.text_field :surname_2, class:"form-control", placeholder:"Segundo apellido" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.text_field :birthday, class:"form-control", 'data-behaviour' => 'datepicker', placeholder:"Fecha de nacimiento" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.select(:genre, ['Género','Masculino', 'Femenino'], {}, {:class => "select"}) %>
+		</div>
+	</div>
+	</div>
+	<div class="text-center">
+		<%= f.submit 'Siguiente', class:"btn btn-primary" %>
+	</div>
+	</div>
+<% end %>
+</div>
+</body>
+
+<script>
+	$('[data-behaviour~=datepicker]').datepicker({
+		format: 'dd/mm/yyyy',
+		startDate: '01/01/1920',
+		language: 'es',
+		startView: 2
+	});
+</script>

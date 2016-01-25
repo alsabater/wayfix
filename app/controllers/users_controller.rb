@@ -8,29 +8,25 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			flash[:success]="User successfully created"
 			session[:user_id] = @user.id
-			redirect_to user_path(@user.id)
+			redirect_to after_register_path(:personal_1)
 		else
 			render 'new'
 		end
 	end
 
 	def show
-		@user = User.find(current_user)
+		@user = current_user
 	end
 
 	def edit
-		@user = User.find(current_user)
+		@user = current_user
 	end
 
 	def update
-		@user = User.find(current_user)
-		if @user.update(user_params)
-			redirect_to user_path
-		else
-			render 'edit'
-		end
+		@user = current_user
+		@user.update_attributes(user_params)
+		redirect_to user_path
 	end
 
 	def settings
@@ -38,8 +34,7 @@ class UsersController < ApplicationController
 	end
 
 	private
-	def user_params
-		params.require(:user).permit(:name, :surname_1, :surname_2, :dni, :passport, :genre, :birthday, :country, :phone_number_1, :phone_number_2, :email, :password, :job_position)
-	end
-
+ 	def user_params
+    params.require(:user).permit(:status, :name, :surname_1, :surname_2, :dni_passport, :genre, :birthday, :country, :phone_number_1, :phone_number_2, :email, :password, :job_position)
+  	end
 end

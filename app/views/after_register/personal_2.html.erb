@@ -1,0 +1,37 @@
+<body class="log_in_background">
+<div id="signup">
+<h4>Información personal</h4><br/>
+<%= form_for @user, url: wizard_path do |f| %>
+	<div class="form-horizontal">	
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.text_field :dni_passport, class:"form-control", placeholder: "Dni o Pasaporte" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.country_select(:country, ["Spain"], {}, {:class => "select"})%>
+		</div>	
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.text_field :phone_number_1, class:"form-control", placeholder:"Teléfono" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.text_field :phone_number_2, class:"form-control", placeholder:"Teléfono alternativo" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.select(:job_position, ['Tipo de usuario','Personal de administración y servicios','Personal Médico','Personal sanitario no médico'], {}, {:class => "select"}) %>
+		</div>
+	</div>
+	</div>
+	<div class="text-center">
+		<%= f.submit 'Siguiente', class:"btn btn-primary" %>
+	</div>
+	</div>
+<% end %>
+</body>
