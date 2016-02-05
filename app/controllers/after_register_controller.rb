@@ -1,5 +1,6 @@
 class AfterRegisterController < ApplicationController
 	include Wicked::Wizard
+
 	steps :personal_1, :personal_2
 
 	attr_accessor :active
@@ -14,11 +15,11 @@ class AfterRegisterController < ApplicationController
 		@user = current_user
 		@user.active = "true"
 		@user.attributes = user_params
-		render_wizard (@user)
+		render_wizard(@user)
 	end
 
 	def finish_wizard_path
-		user_path(current_user)
+		new_client_path
 	end
 
 	private

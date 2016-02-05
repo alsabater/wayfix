@@ -1,2 +1,22 @@
-<%= render 'navbar' %>
-<%= render 'form' %>
+<body class="log_in_background">
+<div class="client_form">
+<h4>Es el momento de añadir información acerca de tu negocio</h4><br/>
+<%= form_for @client do |f| %>
+<div class="form-horizontal">
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.text_field :clinic_name, class:"form-control", placeholder:'Nombre empresa' %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-12">
+			<%= f.text_field :nif, class:"form-control", placeholder:'NIF' %>
+		</div>
+	</div>
+</div>
+<div class="text-center">
+	<%= f.submit "Siguiente", class:"btn btn-primary" %>
+</div>
+<% end %>
+</div>
+</body>

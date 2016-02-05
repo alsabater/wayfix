@@ -1,0 +1,6 @@
+<%= form_for @client, url: wizard_path, method: :put do |f| %>
+  <%= yield f %>
+  <div class="text-center">
+    <%= f.submit "Siguiente", class:"btn btn-primary" %>
+  </div>
+<% end %>

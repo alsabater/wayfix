@@ -13,47 +13,47 @@
 						</div>
 					</div>
 				<% else %>	
-					<div class="form-horizontal">	
-						<div class="form-group">
-							<div class="col-sm-3 control-label">
-								<%= f.label :DNI_Passport %>
-							</div>
-							<div class="col-sm-5">
-								<%= f.text_field :dni_passport, class:"form-control", placeholder: "23185679F" %>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-3 control-label">
-								<%= f.label :País %>
-							</div>
-							<div class="col-sm-3">
-								<%= f.country_select(:country, ["Spain"], {}, {:class => "select"})%>
-							</div>	
-						</div>
-						<div class="form-group">
-							<div class="col-sm-3 control-label">
-								<%= f.label :Teléfono %>
-							</div>
-							<div class="col-sm-5">
-								<%= f.text_field :phone_number_1, class:"form-control", placeholder:"0034661662050" %>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-3 control-label">
-								<%= f.label :Teléfono_alternativo %>
-							</div>
-							<div class="col-sm-5">
-								<%= f.text_field :phone_number_2, class:"form-control" %>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-3 control-label">
-								<%= f.label :Tipo_de_usuario %>
-							</div>
-							<div class="col-sm-3">
-								<%= f.select(:job_position, ['','Personal de administración y servicios','Personal Médico','Personal sanitario no médico'], {}, {:class => "select"}) %>
-							</div>
-						</div>
+			<div class="form-horizontal">	
+				<div class="form-group">
+					<div class="col-sm-3 control-label">
+						<%= f.label :DNI_Passport %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :dni_passport, class:"form-control", placeholder: "23185679F" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-3 control-label">
+						<%= f.label :País %>
+					</div>
+					<div class="col-sm-3">
+						<%= f.country_select(:country, ["Spain"], {}, {:class => "select"})%>
+					</div>	
+				</div>
+				<div class="form-group">
+					<div class="col-sm-3 control-label">
+						<%= f.label :Teléfono %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :phone_number_1, class:"form-control", placeholder:"0034661662050" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-3 control-label">
+						<%= f.label :Teléfono_alternativo %>
+					</div>
+					<div class="col-sm-5">
+						<%= f.text_field :phone_number_2, class:"form-control" %>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-3 control-label">
+						<%= f.label :Tipo_de_usuario %>
+					</div>
+					<div class="col-sm-3">
+						<%= f.select(:job_position, ['','Personal de administración y servicios','Personal Médico','Personal sanitario no médico'], {}, {:class => "select"}) %>
+					</div>
+				</div>
 				<% end %>
 				<div class="text-center">
 					<%= f.submit @user.new_record? ? "Siguiente" : "Actualizar", class:"btn btn-success" %>

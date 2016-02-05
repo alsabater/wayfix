@@ -1,0 +1,34 @@
+<%= render layout: 'form' do |f| %>
+	<div class="form-group">
+		<div class="col-sm-4 control-label">
+			<%= f.label :Dirección_postal %>
+		</div>
+		<div class="col-sm-5">
+			<%= f.text_field :address, class:"form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-4 control-label">
+			<%= f.label :Ciudad %>
+		</div>
+		<div class="col-sm-5">
+			<%= f.text_field :city, class:"form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-4 control-label">
+			<%= f.label :Provincia %>
+		</div>
+		<div class="col-sm-5">
+			<%= f.text_field :province, class:"form-control" %>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-4 control-label">
+			<%= f.label :Código_postal %>
+		</div>
+		<div class="col-sm-3">
+			<%= f.text_field :zip_code, class:"form-control" %>
+		</div>
+	</div>
+<% end %>

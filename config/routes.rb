@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   delete 'signout', to: 'sessions#destroy'
 
   resources :after_register
+  resources :client_wizard
   resources :users
   resources :clients
   resources :centers
